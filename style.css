@@ -1,0 +1,31 @@
+html {
+  font-family: Interstate Verdana sans-serif;
+  padding: 0.6em;
+  background-color: whitesmoke;
+}
+html,body {
+  height: 100%;
+  margin: 0.6%;
+}
+body {
+  display: flex;  
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+}
+.thumbnail {    
+    height:4em;
+    background-color: azure;
+    margin: 3%;
+    cursor: pointer;
+}
+.close {
+  float: right
+}
+/*media*/
+@media screen and (min-width:700px) {
+	body {
+		margin: 0.6% 10% 0.6% 10%;
+	}
+}

@@ -1,12 +1,22 @@
 window.addEventListener('load',()=> {
     const modal = document.querySelector('#videoModal');
-    modal.addEventListener('shown.bs.modal', ()=> {        
-        var iframe = document.querySelector('#videoFrame');
-        iframe.width = "100%";
-        iframe.height = "315";
-        iframe.src = "https://www.youtube.com/embed/u-vrdPtZVXc";
+    const iframe = document.querySelector('#videoFrame');
+    const containerArray = Array.from(document.querySelectorAll('.thumbnail'));
+    containerArray.forEach(container => {
+        container.addEventListener('click', (e)=> {      
+            iframe.width = "100%";
+            iframe.height = "415";
+            $(iframe).attr('src',e.currentTarget.dataset.video);
+        });
     });
-    modal.addEventListener('hidden.bs.modal', ()=> {        
-        $('#videoFrame').removeAttr('src');
-    })
+  	if(modal && modal.length>0) {
+    	modal.addEventListener('hidden.bs.modal', ()=> {        
+        $(iframe).removeAttr('src');
+    	})  
+    }
+  	if(document.querySelector('.close') && document.querySelector('.close').length>0) {
+    	document.querySelector('.close').addEventListener('click',()=>{
+        $(modal).modal('hide');
+    	})  
+    }
 });

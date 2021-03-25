@@ -8,25 +8,46 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 		<link rel="preload" href="style.css" as="style">
 		<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">		
+		<link rel="preconnect" href="https://www.youtube.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://cdn.jsdelivr.net">
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 	</head>
-	<body>
-		<header>VIDEOS</header>				
+	<body>		
 		<div id="mainContainer col-md-12 col-sm-4">			
-			<div class="row">
-				<div class="col-md-6 col-sm-4" data-bs-toggle="modal" data-bs-target="#videoModal">
-					<div class="card thumbnail">Video 1</div>
-				</div>
-				<div class="col-md-6 col-sm-4" data-bs-toggle="modal" data-bs-target="#videoModal">
-					<div class="card thumbnail">Video 2</div>
-				</div>
+			<div class="article_page">
+				<div class="inner col-md-12">
+					<!--common video article-->
+					<ul class="outerRowContainer">
+						<li class="inner videoParent custom-md-6">				
+							<div class="videoContainer">
+								<img src="assets/tnail.png" class="img-thumbnail thumbnail" alt="Video 1" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="http://www.youtube.com/embed/loFtozxZG0s">
+								<h6>GETTING STARTED</h6>
+								<div class="lowerFont">A brief video description up to 155 characters</div>
+							</div>
+						</li>
+						<li class="inner videoParent custom-md-6">				
+							<div class="videoContainer">
+								<img src="assets/tnail.png" class="img-thumbnail thumbnail" alt="Video 2" 
+								data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.youtube.com/embed/u-vrdPtZVXc">
+								<h6>FINDING YOUR FIT</h6>
+								<div class="lowerFont">A brief video description up to 155 characters</div>
+							</div>				
+						</li>
+					</ul>
+					<!--common video article-->
+			  	</div>
 			</div>
 		</div>
-		<!-- Full screen modal -->
 		<div class="modal fade" id="videoModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-fullscreen-sm-down modal-fullscreen-md-down modal-fullscreen-lg-down">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<div class="embed-responsive embed-responsive-16by9">					
-					<iframe id="videoFrame" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/u-vrdPtZVXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="modal-dialog modal-fullscreen-sm-down modal-fullscreen-md-down modal-fullscreen-lg-down modal-sm modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<div class="embed-responsive embed-responsive-16by9">					
+							<iframe id="videoFrame" class="embed-responsive-item" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
